@@ -25,5 +25,5 @@ Route::resource('orders', OrderController::class);
 Route::get('courier_orders/{courier_id}', 'CourierController@courier_orders'); //get courier with orders
 Route::delete('delete_couriers_order/{courier_id}','CourierController@delete_couriers_order'); //delete courier's orders
 
-Route::get('order_customer/{token_string}','OrderController@order_customer'); //get order with customer info
+Route::get('order_customer/{customer_token}','OrderController@order_customer'); //get order with customer info
 

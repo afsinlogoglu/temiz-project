@@ -14,11 +14,10 @@ class Order extends Model
         'receiverName',
         'receiverPhone',
         'senderAddress',
-        'receiverAddress',
-        'token_string'];
+        'receiverAddress',];
 
         public function customers(){
-            return $this->belongsTo(Customer::class,'token_string');
+            return $this->belongsTo(Customer::class,'customer_token','token');
         }
 
         public function couriers(){
