@@ -35,7 +35,7 @@
   const service = new google.maps.DistanceMatrixService();
   // build request
   const origin2 =  "<?php echo $order->senderAddress; ?>"  ;
-  const destinationA = "<?php echo $order->receiverAddress; ?>"  ;
+  const destinationA = "<?php echo $order->couriers->location; ?>"  ;
   const request = {
     origins: [origin2],
     destinations: [destinationA],

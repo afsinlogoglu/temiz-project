@@ -39,7 +39,6 @@ class OrderController extends Controller
     {
         $this->validate($request,[
             'customer_token' => 'required|min:10|max:10',
-            'courier_id' => 'required',
             'senderName' => 'required|min:6|max:30',
             'senderPhone' => 'required|max:12',
             'receiverName' => 'required|min:6|max:30',

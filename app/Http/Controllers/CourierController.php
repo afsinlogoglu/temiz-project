@@ -41,6 +41,7 @@ class CourierController extends Controller
             'phone' => 'required|max:12',
             'capacity' =>'required|max:10',
             'plate' => 'required',
+            'location' => 'required',
         ]);
         $courier = Courier::create($request->all());
         return response($courier,200);

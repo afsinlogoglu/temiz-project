@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $attributes= [
+        'courier_id' => 1,
+    ];
     protected $fillable = [
         'customer_token',
         'courier_id',
@@ -21,6 +24,6 @@ class Order extends Model
         }
 
         public function couriers(){
-            return $this->hasOne(Courier::class,'courier_id');
+            return $this->hasOne(Courier::class,'id','courier_id');
         }
 }

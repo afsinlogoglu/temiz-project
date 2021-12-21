@@ -27,3 +27,7 @@ Route::delete('delete_couriers_order/{courier_id}','CourierController@delete_cou
 
 Route::get('order_customer/{customer_token}','OrderController@order_customer'); //get order with customer info
 
+Route::get('orderDistance/{order_id}', 'OrderController@orderDistance'); // get distance data between senderAddress-receiverAddress
+
+Route::post('getDistance','DistanceController@getDistance'); //send order to closest courier
+Route::get('getDistance','DistanceController@getDistance');
