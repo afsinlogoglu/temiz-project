@@ -18,7 +18,7 @@ class DistanceController extends Controller
             foreach ($couriers as $courier) {
                 $origin = trim($courier->location);
                 $destination = trim($order->senderAddress);
-                $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=".urlencode($origin)."&destinations=".urlencode($destination)."&key=AIzaSyCQ2FPxd1qW0LQQ3gHt4QIVBVoK_AxaoGc"; 
+                $url = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=".urlencode($origin)."&destinations=".urlencode($destination)."&key=API_KEY"; 
                 $Data = json_decode(file_get_contents($url));
                 $distance = ($Data->rows[0]->elements[0]->distance->value)/1000;
                 
